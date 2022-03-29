@@ -1,0 +1,10 @@
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  namespace: kong
+  name: kong
+spec:
+  serviceRef:
+    name: r1-kong-proxy
+    port: 80
+  targetGroupARN: arn:aws:elasticloadbalancing:ap-southeast-1:792676060025:targetgroup/tidu-cluster/ac5f56a102a24f75
