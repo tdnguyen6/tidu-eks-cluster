@@ -3,7 +3,7 @@ kind: ClusterConfig
 metadata:
   name: tidu-cluster
   region: ap-southeast-1
-  version: "1.21"
+  version: 1.21
   tags:
     karpenter.sh/discovery: tidu-cluster
 

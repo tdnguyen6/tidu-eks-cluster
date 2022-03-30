@@ -7,4 +7,5 @@ spec:
   serviceRef:
     name: r1-kong-proxy
     port: 80
-  targetGroupARN: arn:aws:elasticloadbalancing:ap-southeast-1:792676060025:targetgroup/tidu-cluster/ac5f56a102a24f75
+  targetGroupARN: arn:aws:elasticloadbalancing:ap-southeast-1:792676060025:targetgroup/kong-http/36a4b07cd02d720e
+

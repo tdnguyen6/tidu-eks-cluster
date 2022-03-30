@@ -1,6 +1,20 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/tidu/scratch/tidu-cluster'
-make: Leaving directory '/home/tidu/scratch/tidu-cluster'
+make: Entering directory '/home/tidu/scratch/kong-existing-alb'
  
-Makefile:1: *** missing separator.  Stop.
+# eksctl utils associate-iam-oidc-provider \
+  #   --region ap-southeast-1 \
+  #   --cluster tidu-cluster \
+  #   --approve
+curl -o /tmp/iam-policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/main/docs/install/iam_policy.json
+aws iam create-policy \
+    --policy-name AWSLoadBalancerControllerIAMPolicy \
+    --policy-document file:///tmp/iam-policy.json
+eksctl create iamserviceaccount \
+	--cluster=tidu-cluster \
+	--namespace=kube-system \
+	--name=aws-load-balancer-controller \
+	--attach-policy-arn=arn:aws:iam::443533367748:policy/AWSLoadBalancerControllerIAMPolicy \
+	--override-existing-serviceaccounts \
+	--approve
+make: Leaving directory '/home/tidu/scratch/kong-existing-alb'
  

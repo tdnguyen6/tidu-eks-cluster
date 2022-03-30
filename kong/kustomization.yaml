@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: kong
 resources:
   - ns.yaml
+  - ingressclass.yaml
 
 helmCharts:
   - name: kong
@@ -10,4 +11,4 @@ helmCharts:
     namespace: kong
     releaseName: r1
     valuesFile: kong.yaml
-    
+    includeCRDs: true

@@ -1,5 +1,6 @@
+replicaCount: 5
 proxy:
-  type: NodePort
+  type: ClusterIP
   # http:
   #   nodePort: 32080
   tls:

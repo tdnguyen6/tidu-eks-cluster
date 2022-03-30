@@ -3,3 +3,7 @@ clusterName: tidu-cluster
 serviceAccount:
   create: false
   name: aws-load-balancer-controller
+
+vpcId: vpc-0e90f4d07abc195ce
+
+logLevel: debug

@@ -3,12 +3,14 @@ kind: Kustomization
 namespace: karpenter
 resources:
   - ns.yaml
+  - default-provisioner.yaml
 
 helmCharts:
   - name: karpenter
     repo: https://charts.karpenter.sh/
     namespace: karpenter
-    releaseName: r1
+    releaseName: karpenter
     valuesFile: karpenter.yaml
     version: v0.7.3
+    includeCRDs: true
     

@@ -1,5 +1,5 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-Makefile:1: *** missing separator.  Stop.
+make: *** No rule to make target 'all'.  Stop.
  
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
@@ -8,7 +8,7 @@ Makefile:1: *** missing separator.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Mar 29 10:32:29 2022
+# Make data base, printed on Wed Mar 30 18:29:31 2022
 
 # Variables
 
@@ -17,7 +17,7 @@ LC_ALL = C
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
-WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
+WSLENV = VSCODE_WSL_EXT_LOCATION/up
 # environment
 VSCODE_CWD = /mnt/c/Program Files/Microsoft VS Code
 # default
@@ -31,7 +31,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/tidu/scratch/tidu-cluster
+PWD = /home/tidu/scratch/kong-existing-alb
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -55,13 +55,20 @@ ARCHFLAGS = -arch x86_64
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/tidu/scratch/tidu-cluster
+CURDIR := /home/tidu/scratch/kong-existing-alb
 # environment
-TIMEFMT = 
+define TIMEFMT
+
+================
+CPU	%P
+user	%*U
+system	%*S
+total	%*E
+endef
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -73,7 +80,6 @@ WAYLAND_DISPLAY = wayland-0
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
- 
 P9K_SSH = 0
 # environment
 ZDOTDIR = /home/tidu
@@ -87,14 +93,12 @@ ZSH = /home/tidu/.oh-my-zsh
 VSCODE_VERBOSE_LOGGING = true
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# environment
-WT_PROFILE_ID = {89fa2078-aec4-4cc5-af0f-219f15d5ea20}
 # automatic
 *F = $(notdir $*)
+# makefile (from 'Makefile', line 4)
+CLUSTER = tidu-cluster
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
-# environment
-P9K_TTY = old
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # default
@@ -104,27 +108,29 @@ SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 3
+SHLVL = 2
 # environment
 BW_SESSION = 5iPGZwZduuocoZWu+J4QANDvWFNdXYOjSh9+2httGKTsBgiyoRAWZkOx4ZDNG4Z+vHtnBm+M3pxYhnUbbTeBfQ==
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
+# makefile (from 'Makefile', line 3)
+REGION = ap-southeast-1
 # environment
-PATH = /home/tidu/.vscode-server/bin/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1/bin/remote-cli:/home/tidu/.cargo/bin:/home/tidu/bin:/home/tidu/.local/bin:/home/tidu/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/tools/BCURRAN3:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/TiDu/scoop/shims:/mnt/c/Users/TiDu/AppData/Local/Microsoft/WindowsApps:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+PATH = /home/tidu/.vscode-server/bin/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1/bin/remote-cli:/home/tidu/.cargo/bin:/home/tidu/bin:/home/tidu/.local/bin:/home/tidu/scripts:/home/tidu/.cargo/bin:/home/tidu/bin:/home/tidu/.local/bin:/home/tidu/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/tools/BCURRAN3:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/TiDu/scoop/shims:/mnt/c/Users/TiDu/AppData/Local/Microsoft/WindowsApps:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 # default
 MAKEFILES := 
 # automatic
 ^F = $(notdir $^)
-# environment
-WT_SESSION = d5a7ce40-a489-45a8-95c1-0be9a11b315c
+# makefile (from 'Makefile', line 5)
+AWS_ACCOUNT_ID := 443533367748
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
 ?F = $(notdir $?)
 # environment
-NAME = Code
+NAME = Shiba
 # environment
 AUTOJUMP_SOURCED = 1
 # environment
@@ -136,15 +142,15 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # environment
 LESS = -R
 # environment
-WSL_INTEROP = /run/WSL/205_interop
-# environment
+WSL_INTEROP = /run/WSL/20260_interop
+# 'override' directive
 GNUMAKEFLAGS := 
 # environment
 LOGNAME = tidu
 # environment
 VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/TiDu/.vscode/extensions/ms-vscode-remote.remote-wsl-0.64.2
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := iam-sa-albc
 # environment
 AUTOJUMP_ERROR_PATH = /home/tidu/.local/share/autojump/errors.log
 # environment
@@ -155,7 +161,8 @@ DISPLAY = 172.23.176.1:0
 USER = tidu
 # default
 MAKE_VERSION := 4.3
- 
+# 'override' directive
+.SHELLSTATUS := 0
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
@@ -165,9 +172,9 @@ _ = /usr/sbin/make
 # environment
 XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-a10773a1-fba5-49c0-9415-b507939badaf.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-07b73a87-028a-48de-9ced-63d23e14cb1a.sock
 # environment
-IPv4 = 172.23.177.254
+IPv4 = 172.23.180.28
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -181,13 +188,11 @@ TERM = xterm-256color
 # default
 SUFFIXES := 
 # environment
-_P9K_TTY = /dev/pts/2
-# environment
 WSL_DISTRO_NAME = Arch
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
 # variable set hash-table stats:
-# Load=86/1024=8%, Rehash=0, Collisions=2/99=2%
+# Load=86/1024=8%, Rehash=0, Collisions=3/119=3%
 
 # Pattern-specific Variable Values
 
@@ -195,9 +200,9 @@ WSL_DISTRO_NAME = Arch
 
 # Directories
 
-# . (device 2080, inode 35376): 9 files, no impossibilities.
+# . (device 2096, inode 35376): 14 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -205,11 +210,50 @@ WSL_DISTRO_NAME = Arch
 
 # Files
 
-# Not a target:
-Makefile:
+.ONESHELL:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+karpenter-clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 42):
+	./karpenter/scripts/cleanup.sh
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-30 14:33:55.133765
+#  File has been updated.
+#  Successfully updated.
+
+.SILENT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+iam-sa-albc:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 8):
+	# eksctl utils associate-iam-oidc-provider \
+  #   --region $(REGION) \
+  #   --cluster $(CLUSTER) \
+  #   --approve
+	curl -o /tmp/iam-policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/main/docs/install/iam_policy.json
+	aws iam create-policy \
+    --policy-name AWSLoadBalancerControllerIAMPolicy \
+    --policy-document file:///tmp/iam-policy.json
+	eksctl create iamserviceaccount \
+		--cluster=$(CLUSTER) \
+		--namespace=kube-system \
+		--name=aws-load-balancer-controller \
+		--attach-policy-arn=arn:aws:iam::$(AWS_ACCOUNT_ID):policy/AWSLoadBalancerControllerIAMPolicy \
+		--override-existing-serviceaccounts \
+		--approve
 
 # Not a target:
 .DEFAULT:
@@ -220,25 +264,87 @@ Makefile:
 # Not a target:
 all:
 #  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+he: .ONESHELL
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 50):
+	X=$$(date)
+	echo $$X
+
+delete:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 36):
+	kubectl kustomize . --enable-helm | kubectl delete -f -
+
+test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 45):
+	echo $(AWS_ACCOUNT_ID)
+	echo $(AWS_ACCOUNT_ID)
+	echo $(CLUSTER)
+
+apply:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
+#  recipe to execute (from 'Makefile', line 33):
+	kubectl kustomize . --enable-helm | kubectl apply -f -
+
+view:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 30):
+	kubectl kustomize . --enable-helm
+
+t:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 54):
+	X=$$(date)
+	echo $$X
+
+karpenter-config:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 39):
+	./karpenter/scripts/install.sh
+
+iam-sa-clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 25):
+	eksctl delete iamserviceaccount aws-load-balancer-controller --cluster $(CLUSTER)
+	aws iam delete-policy --policy-arn arn:aws:iam::$(AWS_ACCOUNT_ID):policy/AWSLoadBalancerControllerIAMPolicy
+	OIDCURL=$$(aws eks describe-cluster --name $(CLUSTER) --output json | jq -r .cluster.identity.oidc.issuer | sed -e "s*https://**") &&	aws iam delete-open-id-connect-provider --open-id-connect-provider-arn arn:aws:iam::$(AWS_ACCOUNT_ID):oidc-provider/$$OIDCURL
 
 # files hash-table stats:
-# Load=4/1024=0%, Rehash=0, Collisions=0/5=0%
+# Load=16/1024=2%, Rehash=0, Collisions=0/27=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 131 B / avg = 9 B
-# current buf: size = 8162 B / used = 131 B / count = 14 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 277 B / avg = 8 B
+# current buf: size = 8162 B / used = 277 B / count = 31 / avg = 8 B
 
-# strcache performance: lookups = 18 / hit rate = 22%
+# strcache performance: lookups = 48 / hit rate = 35%
 # hash-table stats:
- 
-# Load=14/8192=0%, Rehash=0, Collisions=0/18=0%
-# Finished Make data base on Tue Mar 29 10:32:29 2022
+# Load=31/8192=0%, Rehash=0, Collisions=0/48=0%
+# Finished Make data base on Wed Mar 30 18:29:31 2022
 
  
