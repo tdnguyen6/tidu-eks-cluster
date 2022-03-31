@@ -15,3 +15,13 @@ spec:
               number: 80
         path: /
         pathType: Prefix
+  - host: httpbin-2.elb.aws.tidu.cc
+    http:
+      paths:
+      - backend:
+          service:
+            name: httpbin-2
+            port:
+              number: 80
+        path: /
+        pathType: Prefix

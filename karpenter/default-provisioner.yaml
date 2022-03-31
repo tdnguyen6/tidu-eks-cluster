@@ -20,5 +20,5 @@ spec:
     subnetSelector:
       karpenter.sh/discovery: tidu-cluster
     securityGroupSelector:
-      karpenter.sh/discovery: tidu-cluster
+      kubernetes.io/cluster/tidu-cluster: owned
   ttlSecondsAfterEmpty: 30

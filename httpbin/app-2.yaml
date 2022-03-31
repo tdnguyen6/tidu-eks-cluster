@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: httpbin-2
+  labels:
+    app: httpbin-2
+    service: httpbin-2
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  selector:
+    app: httpbin-2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpbin-2
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: httpbin-2
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: httpbin-2
+        version: v1
+    spec:
+      containers:
+      - image: docker.io/kennethreitz/httpbin
+        imagePullPolicy: IfNotPresent
+        name: httpbin
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 1500m
+            memory: 1.25Gi
+          limits:
+            cpu: 1500m
+            memory: 1.25Gi

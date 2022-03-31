@@ -2,7 +2,7 @@ serviceAccount:
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::792676060025:role/tidu-cluster-karpenter
 clusterName: tidu-cluster
-clusterEndpoint: https://8996C2942DF5D81D4B09B1451B1CD9AD.gr7.ap-southeast-1.eks.amazonaws.com
+clusterEndpoint: https://33002CAA5ECFB441CD0CEF3B666D933B.gr7.ap-southeast-1.eks.amazonaws.com
 aws:
   defaultInstanceProfile: KarpenterNodeInstanceProfile-tidu-cluster
 logLevel: debug

@@ -34,6 +34,9 @@ metadata:
   tags:
     karpenter.sh/discovery: ${CLUSTER_NAME}
 
+vpc:
+  cidr: 172.30.0.0/16
+
 availabilityZones:
   - ap-southeast-1a
   - ap-southeast-1b

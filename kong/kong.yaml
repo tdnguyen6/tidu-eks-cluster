@@ -1,7 +1,16 @@
-replicaCount: 5
+replicaCount: 4
 proxy:
   type: ClusterIP
   # http:
   #   nodePort: 32080
   tls:
     enabled: false
+
+ingressController:
+  resources:
+    requests:
+      cpu: 1500m
+      memory: 1.25Gi
+    limits:
+      cpu: 1500m
+      memory: 1.25Gi

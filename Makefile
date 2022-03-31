@@ -22,7 +22,7 @@ iam-sa-albc:
 		--approve
 
 iam-sa-clean:
-	eksctl delete iamserviceaccount aws-load-balancer-controller --cluster $(CLUSTER)
+	# eksctl delete iamserviceaccount aws-load-balancer-controller --cluster $(CLUSTER)
 	aws iam delete-policy --policy-arn arn:aws:iam::$(AWS_ACCOUNT_ID):policy/AWSLoadBalancerControllerIAMPolicy
 	OIDCURL=$$(aws eks describe-cluster --name $(CLUSTER) --output json | jq -r .cluster.identity.oidc.issuer | sed -e "s*https://**") &&	aws iam delete-open-id-connect-provider --open-id-connect-provider-arn arn:aws:iam::$(AWS_ACCOUNT_ID):oidc-provider/$$OIDCURL
 

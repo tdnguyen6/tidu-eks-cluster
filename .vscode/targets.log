@@ -1,6 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
- 
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Mar 30 18:29:31 2022
+# Make data base, printed on Thu Mar 31 08:49:50 2022
 
 # Variables
 
@@ -142,7 +142,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # environment
 LESS = -R
 # environment
-WSL_INTEROP = /run/WSL/20260_interop
+WSL_INTEROP = /run/WSL/206_interop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -156,7 +156,7 @@ AUTOJUMP_ERROR_PATH = /home/tidu/.local/share/autojump/errors.log
 # environment
 EDITOR = micro
 # environment
-DISPLAY = 172.23.176.1:0
+DISPLAY = 172.23.80.1:0
 # environment
 USER = tidu
 # default
@@ -172,9 +172,9 @@ _ = /usr/sbin/make
 # environment
 XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-07b73a87-028a-48de-9ced-63d23e14cb1a.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-df6b96b8-20dc-42c5-9fcd-e2e286ba72f5.sock
 # environment
-IPv4 = 172.23.180.28
+IPv4 = 172.23.82.46
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -200,7 +200,7 @@ WSL_DISTRO_NAME = Arch
 
 # Directories
 
-# . (device 2096, inode 35376): 14 files, no impossibilities.
+# . (device 2080, inode 35376): 14 files, no impossibilities.
 
 # 14 files, no impossibilities in 1 directories.
 
@@ -289,6 +289,7 @@ test:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 45):
 	echo $(AWS_ACCOUNT_ID)
+ 
 	echo $(AWS_ACCOUNT_ID)
 	echo $(CLUSTER)
 
@@ -296,7 +297,6 @@ apply:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 33):
 	kubectl kustomize . --enable-helm | kubectl apply -f -
 
@@ -345,6 +345,6 @@ iam-sa-clean:
 # strcache performance: lookups = 48 / hit rate = 35%
 # hash-table stats:
 # Load=31/8192=0%, Rehash=0, Collisions=0/48=0%
-# Finished Make data base on Wed Mar 30 18:29:31 2022
+# Finished Make data base on Thu Mar 31 08:49:50 2022
 
  
