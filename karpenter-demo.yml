@@ -1,0 +1,5 @@
+clusterName: karpenter-demo
+serviceAccount:
+  create: false
+  name: aws-load-balancer-controller
+vpcId: vpc-005e708cad61f4b68

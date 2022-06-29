@@ -1,0 +1,7 @@
+clusterName: eks-dev
+
+serviceAccount:
+  create: false
+  name: aws-load-balancer-controller
+
+vpcId: vpc-064bc4b2090b90332

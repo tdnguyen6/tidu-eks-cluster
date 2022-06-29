@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Mar 31 08:49:50 2022
+# Make data base, printed on Thu Mar 31 15:07:18 2022
 
 # Variables
 
@@ -68,7 +68,7 @@ endef
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -172,7 +172,7 @@ _ = /usr/sbin/make
 # environment
 XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-df6b96b8-20dc-42c5-9fcd-e2e286ba72f5.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-aff7de76-e573-43b2-8fad-9733d7e86f2d.sock
 # environment
 IPv4 = 172.23.82.46
 # environment
@@ -225,7 +225,7 @@ karpenter-clean:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-30 14:33:55.133765
+#  Last modified 2022-03-31 15:00:49.9907396
 #  File has been updated.
 #  Successfully updated.
 
@@ -289,12 +289,12 @@ test:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 45):
 	echo $(AWS_ACCOUNT_ID)
- 
 	echo $(AWS_ACCOUNT_ID)
 	echo $(CLUSTER)
 
 apply:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 33):
@@ -327,7 +327,7 @@ iam-sa-clean:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 25):
-	eksctl delete iamserviceaccount aws-load-balancer-controller --cluster $(CLUSTER)
+	# eksctl delete iamserviceaccount aws-load-balancer-controller --cluster $(CLUSTER)
 	aws iam delete-policy --policy-arn arn:aws:iam::$(AWS_ACCOUNT_ID):policy/AWSLoadBalancerControllerIAMPolicy
 	OIDCURL=$$(aws eks describe-cluster --name $(CLUSTER) --output json | jq -r .cluster.identity.oidc.issuer | sed -e "s*https://**") &&	aws iam delete-open-id-connect-provider --open-id-connect-provider-arn arn:aws:iam::$(AWS_ACCOUNT_ID):oidc-provider/$$OIDCURL
 
@@ -345,6 +345,6 @@ iam-sa-clean:
 # strcache performance: lookups = 48 / hit rate = 35%
 # hash-table stats:
 # Load=31/8192=0%, Rehash=0, Collisions=0/48=0%
-# Finished Make data base on Thu Mar 31 08:49:50 2022
+# Finished Make data base on Thu Mar 31 15:07:18 2022
 
  

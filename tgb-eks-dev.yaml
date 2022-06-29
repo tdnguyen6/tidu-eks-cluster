@@ -1,0 +1,11 @@
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  namespace: istio-ingress
+  name: istio-ingress
+spec:
+  serviceRef:
+    name: istio-ingress
+    port: 80
+  targetGroupARN: arn:aws:elasticloadbalancing:ap-southeast-1:125777176768:targetgroup/istio-dev/3f42a7692e0a3c33
+  

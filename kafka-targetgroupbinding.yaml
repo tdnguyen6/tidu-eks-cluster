@@ -1,0 +1,10 @@
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  namespace: message
+  name: kafka-tg
+spec:
+  serviceRef:
+    name: kafka
+    port: 9092
+  targetGroupARN: arn:aws:elasticloadbalancing:ap-southeast-1:443533367748:targetgroup/kafka-dev/1908dd1e9dbf90c5
